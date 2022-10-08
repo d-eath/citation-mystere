@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-body">
+        <app-error [message]='error'></app-error>
+        <div class="form-group">
+            <textarea #quote class="form-control" rows="2" placeholder="Entrez une citation" (input)='input(quote.value)' (keydown.enter)='submit(); false'></textarea>
+            <small class="form-text text-muted">{{charCount}} caractère{{charCount > 1 ? 's' : ''}}</small>
+        </div>
+        <button class="btn btn-primary float-right" (click)="submit()" [attr.disabled]='submitState()'>Soumettre</button>
+    </div>
+</div>

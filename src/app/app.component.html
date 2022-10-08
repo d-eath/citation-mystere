@@ -1,0 +1,9 @@
+<app-banner></app-banner>
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-5">
+      <app-quote-input *ngIf='inputContext' (submitEvent)='recieveQuote($event)'></app-quote-input>
+      <app-grids *ngIf='!inputContext' (resetEvent)='recieveReset()' [quote]='quote'></app-grids>
+    </div>
+  </div>
+</div>

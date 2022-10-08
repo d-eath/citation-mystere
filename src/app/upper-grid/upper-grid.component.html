@@ -1,0 +1,9 @@
+<table class="mt-5">
+    <tr>
+        <td *ngFor='let column of columns'>
+            <p *ngFor='let char of column'>{{char.getCharacter()}}</p>
+            <!-- Pour garder la même largeur dans les colonnes vides -->
+            <p *ngIf='column.length === 0'>&nbsp;</p>
+        </td>
+    </tr>
+</table>

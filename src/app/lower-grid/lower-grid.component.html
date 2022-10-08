@@ -1,0 +1,5 @@
+<table class="mb-5">
+    <tr *ngFor='let row of grid'>
+        <td *ngFor='let cell of row' [ngClass]='{ special: cell.isSpecial() }'></td>
+    </tr>
+</table>
